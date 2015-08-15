@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 453016}
   - 50: {fileID: 5006798}
   - 114: {fileID: 11490858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 435028}
   - 212: {fileID: 21220424}
-  m_Layer: 0
+  - 60: {fileID: 6089630}
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +43,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 430452}
   - 212: {fileID: 21239552}
-  m_Layer: 0
+  - 60: {fileID: 6088670}
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.83754921, y: -1.12668788, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430452}
@@ -103,6 +105,48 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &6088670
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194524}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -.0117223114, y: .167005658}
+      - {x: -.060545668, y: .0654771775}
+      - {x: -.0408183187, y: -.0698636025}
+      - {x: -.00886438787, y: -.169343278}
+      - {x: .0304092318, y: -.124436744}
+      - {x: .0506819636, y: -.0350682661}
+      - {x: .0556136519, y: .0558863729}
+      - {x: .0343004614, y: .131970048}
+--- !u!60 &6089630
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186336}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -.0117223114, y: .167005658}
+      - {x: -.060545668, y: .0654771775}
+      - {x: -.0408183187, y: -.0698636025}
+      - {x: -.00886438787, y: -.169343278}
+      - {x: .0304092318, y: -.124436744}
+      - {x: .0506819636, y: -.0350682661}
+      - {x: .0556136519, y: .0558863729}
+      - {x: .0343004614, y: .131970048}
 --- !u!114 &11490858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  lifeTime: 1
 --- !u!212 &21220424
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -177,6 +222,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_SortingLayerID
       value: 332063711
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: lifeTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

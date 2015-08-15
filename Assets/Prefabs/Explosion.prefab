@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 467174}
   - 212: {fileID: 21243818}
   - 95: {fileID: 9595150}
+  - 114: {fileID: 11487610}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.62443781, y: -.642267466, z: 0}
+  m_LocalPosition: {x: 4.37390375, y: .623131514, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,6 +47,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11487610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2950904fee24ac94fb78f5b7a8d40b27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21243818
 SpriteRenderer:
   m_ObjectHideFlags: 1
