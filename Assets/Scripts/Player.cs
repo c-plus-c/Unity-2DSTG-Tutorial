@@ -58,6 +58,8 @@ public class Player : MonoBehaviour {
 		// レイヤー名がBullet (Enemy)またはEnemyの場合は爆発
 		if( layerName == "Bullet (Enemy)" || layerName == "Enemy")
 		{
+			FindObjectOfType<Manager>().GameOver();
+
 			// 爆発する
 			spaceship.Explosion();
 			
