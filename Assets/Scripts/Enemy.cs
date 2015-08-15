@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour {
 
 	public int hp = 10;
 
+	public int point = 100;
+
 	// Use this for initialization
 	IEnumerator Start () {
 		spaceship = GetComponent<Spaceship> ();
@@ -57,6 +59,9 @@ public class Enemy : MonoBehaviour {
 		Destroy (c.gameObject);
 
 		if (hp <= 0) {
+
+			FindObjectOfType<Score>().AddPoint(point);
+
 			spaceship.Explosion ();
 
 			Destroy (gameObject);
