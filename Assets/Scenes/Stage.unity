@@ -96,11 +96,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 430240, guid: dc5588911001e824a97108837ee5fd78, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.295609
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 430240, guid: dc5588911001e824a97108837ee5fd78, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .132883161
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 430240, guid: dc5588911001e824a97108837ee5fd78, type: 2}
       propertyPath: m_LocalPosition.z
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  bullet: {fileID: 182032, guid: 51b1ad3131ab88b48972164e96492459, type: 2}
 --- !u!50 &1019399945
 Rigidbody2D:
   serializedVersion: 2
