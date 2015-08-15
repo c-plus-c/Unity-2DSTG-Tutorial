@@ -5,6 +5,8 @@ public class Enemy : MonoBehaviour {
 
 	Spaceship spaceship;
 
+	public int hp = 10;
+
 	// Use this for initialization
 	IEnumerator Start () {
 		spaceship = GetComponent<Spaceship> ();
@@ -16,12 +18,15 @@ public class Enemy : MonoBehaviour {
 		}
 
 		while (true) {
+
+			// 子要素を全て取得する
 			for(int i=0;i< transform.childCount;i++){
 				Transform shotPosition = transform.GetChild(i);
 
 				spaceship.Shot (shotPosition);
 			}
 
+			//shotDelay秒待つ
 			yield return new WaitForSeconds(spaceship.shotDelay);
 		}
 	}
@@ -43,10 +48,20 @@ public class Enemy : MonoBehaviour {
 		if (layerName != "Bullet (Player)")
 			return;
 
+		Transform playerBulletTransform = c.transform.parent;
+
+		Bullet bullet = playerBulletTransform.GetComponent<Bullet> ();
+
+		hp -= bullet.power;
+
 		Destroy (c.gameObject);
 
-		spaceship.Explosion ();
+		if (hp <= 0) {
+			spaceship.Explosion ();
 
-		Destroy (gameObject);
+			Destroy (gameObject);
+		} else {
+			spaceship.GetAnimator().SetTrigger("Damage");
+		}
 	}
 }
