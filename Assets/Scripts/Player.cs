@@ -3,16 +3,16 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	public float speed = 5;
-
-	public GameObject bullet;
+	public Spaceship spaceship;
 
 	// Use this for initialization
 	IEnumerator Start () {
+
+		spaceship = GetComponent<Spaceship> ();
+
 		while (true) {
-			Instantiate(bullet,transform.position,transform.rotation);
-			
-			yield return new WaitForSeconds(0.05f);
+			spaceship.Shot(transform);	
+			yield return new WaitForSeconds(spaceship.shotDelay);
 		}
 	
 	}
@@ -23,6 +23,6 @@ public class Player : MonoBehaviour {
 		float y = Input.GetAxisRaw ("Vertical");
 
 		Vector2 direction = new Vector2 (x, y).normalized;
-		GetComponent<Rigidbody2D>().velocity = direction * speed;
+		spaceship.Move (direction);
 	}
 }
